@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar"
 
 import food1 from "./images/food1.jpeg";
 import food2 from "./images/food2.jpeg";
@@ -17,17 +18,24 @@ import food10 from "./images/food10.jpeg";
 import food11 from "./images/food11.webp";
 import food12 from "./images/food12.webp";
 import Home from "./images/home.jpg";
+import cravings from "./images/cravings.png";
+
 
 function App() {
   return (
     <>
-
+      {/* start navbar of home page  */}
+      <div>
+      <Navbar 
+          navimage={cravings}/>
+      </div>
+      {/* end navbar of home page  */}
 
 
       {/* start front page of app */}
       <div>
         <div>
-          <div className="flex flex-wrap justify-center items-center mb-10">
+          <div className="flex flex-wrap justify-center items-center mt-10 mb-10">
             <div className="text-5xl text-left font-bold mr-20">
               <div className="p-2">Order Fast!</div>
               <div className="text-yellow-500 p-2">Craving</div>
@@ -41,6 +49,8 @@ function App() {
       {/* end front page of app */}
 
       {/* start cards of product */}
+      <div>
+        <div className="mb-8 text-3xl font-bold flex justify-start">Our Products</div>
       <div className="flex flex-wrap gap-[5.75rem] mb-5 ">
         <Card
           foodImage={food1}
@@ -145,11 +155,12 @@ function App() {
           tag3="#Crunchy"
         />
       </div>
+      </div>
       {/* end cards of product */}
 
       {/* start footer of home screen  */}
       <div>
-        <Footer />
+        <Footer footimage={cravings}/>
       </div>
       {/* end footer of home screen */}
     </>
