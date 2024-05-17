@@ -1,4 +1,6 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import SignIn from "./SignIn";
 
 const Navbar = (props) => {
   return (
@@ -18,37 +20,54 @@ const Navbar = (props) => {
         <div className="hidden grow  lg:block">
           <ul className="ml-20 inline-flex space-x-8">
             <li>
-              <a
-                href="#"
-                className="inline-flex items-center text-m font-semibold text-gray-800 hover:text-gray-500"
+            <NavLink
+                to="/Home"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-gray-600": "text-gray-800"
+                  }text-gray-800 inline-flex items-center text-m font-semibold hover:text-gray-600`
+                }
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="#"
-                className="inline-flex items-center text-m font-semibold text-gray-800 hover:text-gray-500"
+              <NavLink
+                to="/About"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-gray-600": "text-gray-800"
+                  }text-gray-800 inline-flex items-center text-m font-semibold hover:text-gray-600`
+                }
               >
                 About
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="#"
-                className="inline-flex items-center text-m font-semibold text-gray-800 hover:text-gray-500"
+            <NavLink
+                to="/About"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-gray-600": "text-gray-800"
+                  } text-gray-800 inline-flex items-center text-m font-semibold hover:text-gray-600`
+                }
               >
-                Contact
-              </a>
+                About
+              </NavLink>
             </li>
           </ul>
         </div>
         <div className="hidden space-x-2 lg:block">
           <button
             type="button"
-            className="rounded-full border-none bg-transparent px-3 py-2 text-sm font-semibold text-black hover:bg-black/20 "
+            className="rounded-full border-none bg-transparent px-3 py-2 text-sm font-semibold hover:bg-black/20 "
           >
-            Sign In
+            <Link
+              to="/SignIn"
+              className={` text-black hover:text-black inline-flex items-center text-m font-semibold`}
+            >
+              sign in
+            </Link>
           </button>
           <button
             type="button"
@@ -57,6 +76,7 @@ const Navbar = (props) => {
             Log In
           </button>
         </div>
+
         <div class="lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"

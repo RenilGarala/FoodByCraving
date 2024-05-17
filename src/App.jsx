@@ -5,6 +5,7 @@ import Card from "./components/Card";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
+
 import food1 from "./images/food1.jpeg";
 import food2 from "./images/food2.jpeg";
 import food3 from "./images/food3.jpeg";
@@ -19,6 +20,7 @@ import food11 from "./images/food11.webp";
 import food12 from "./images/food12.webp";
 import Home from "./images/home.jpg";
 import cravings from "./images/cravings.png";
+
 
 function App() {
   
@@ -38,7 +40,7 @@ function App() {
         <div>
           <div className="flex flex-wrap justify-center items-center mt-10 mb-10 animate__animated animate__fadeIn">
             <div className="text-5xl text-left font-bold mr-20 ">
-              <div className="p-2">Order Fast!</div>
+              <div className="p-2 text-black">Order Fast!</div>
               <div className="text-yellow-500 p-2">Craving</div>
             </div>
             <div>
@@ -162,7 +164,7 @@ function App() {
       {/* end cards of product */}
 
       <div className="mt-20 wow animate__animated animate__fadeInUp">
-        <div className="mb-8 text-3xl font-bold flex justify-start">
+        <div className="mb-8 text-3xl font-bold flex justify-start text-black">
           Change Theme
         </div>
         <div className="flex gap-5 ">
