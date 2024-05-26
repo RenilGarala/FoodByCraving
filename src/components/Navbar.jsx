@@ -20,11 +20,11 @@ const Navbar = (props) => {
         <div className="hidden grow  lg:block">
           <ul className="ml-20 inline-flex space-x-8">
             <li>
-            <NavLink
+              <NavLink
                 to="/Home"
                 className={({ isActive }) =>
                   `${
-                    isActive ? "text-gray-600": "text-gray-800"
+                    isActive ? "text-gray-600" : "text-gray-800"
                   }text-gray-800 inline-flex items-center text-m font-semibold hover:text-gray-600`
                 }
               >
@@ -36,7 +36,7 @@ const Navbar = (props) => {
                 to="/About"
                 className={({ isActive }) =>
                   `${
-                    isActive ? "text-gray-600": "text-gray-800"
+                    isActive ? "text-gray-600" : "text-gray-800"
                   }text-gray-800 inline-flex items-center text-m font-semibold hover:text-gray-600`
                 }
               >
@@ -44,11 +44,11 @@ const Navbar = (props) => {
               </NavLink>
             </li>
             <li>
-            <NavLink
+              <NavLink
                 to="/About"
                 className={({ isActive }) =>
                   `${
-                    isActive ? "text-gray-600": "text-gray-800"
+                    isActive ? "text-gray-600" : "text-gray-800"
                   } text-gray-800 inline-flex items-center text-m font-semibold hover:text-gray-600`
                 }
               >
@@ -58,22 +58,28 @@ const Navbar = (props) => {
           </ul>
         </div>
         <div className="hidden space-x-2 lg:block">
-          <button
-            type="button"
-            className="rounded-full border-none bg-transparent px-3 py-2 text-sm font-semibold hover:bg-black/20 "
+          <Link
+            to="/SignIn"
+            className={` text-black hover:text-black inline-flex items-center text-m font-semibold`}
           >
-            <Link
-              to="/SignIn"
-              className={` text-black hover:text-black inline-flex items-center text-m font-semibold`}
+            <button
+              type="button"
+              className="rounded-full border-none bg-transparent px-3 py-2 text-sm font-semibold hover:bg-black/20 "
             >
               sign in
-            </Link>
-          </button>
+            </button>
+          </Link>
+
           <button
             type="button"
             className="rounded-full border-none bg-black  px-3 py-2 text-sm font-semibold hover:bg-black/20 hover:text-black text-white shadow-sm "
           >
-            Log In
+            <Link
+              to="/LogIn"
+              className={` text-white hover:text-white inline-flex items-center text-m font-semibold`}
+            >
+              Log in
+            </Link>
           </button>
         </div>
 

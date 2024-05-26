@@ -9,6 +9,7 @@ import SignIn from './components/SignIn.jsx'
 import Card from './components/Card.jsx'
 import About from './components/About.jsx'
 import Contact from './components/Contact.jsx'
+import LogIn from './components/LogIn.jsx'
 
 
 
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path='/SignIn' element={<SignIn/>}/>
+        <Route path='/LogIn' element={<LogIn/>}/>
         <Route path='/About' element={<About/>}/>
         <Route path='/' element={<App/>}/>
       </Routes>

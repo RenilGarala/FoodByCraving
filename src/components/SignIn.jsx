@@ -5,7 +5,6 @@ const SignIn = () => {
     <>
         <h1>hello world</h1>
         <h1>Hii, I'm your Friend Ayushi</h1>
-       
     </>
   )
 }
