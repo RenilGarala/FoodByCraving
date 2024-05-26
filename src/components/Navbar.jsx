@@ -45,14 +45,14 @@ const Navbar = (props) => {
             </li>
             <li>
               <NavLink
-                to="/About"
+                to="/Contact"
                 className={({ isActive }) =>
                   `${
                     isActive ? "text-gray-600" : "text-gray-800"
                   } text-gray-800 inline-flex items-center text-m font-semibold hover:text-gray-600`
                 }
               >
-                About
+                Contact
               </NavLink>
             </li>
           </ul>
