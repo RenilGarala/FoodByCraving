@@ -5,7 +5,7 @@ const LogIn = () => {
   return (
 
     <section>
-    <Link to='/Home'>
+    <Link to='/'>
     <img width="40" height="40" src="https://img.icons8.com/ios/50/circled-left-2.png" alt="circled-left-2"/>
     </Link>
     <div className="grid grid-cols-1 lg:grid-cols-2">
