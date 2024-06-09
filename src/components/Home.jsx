@@ -1,35 +1,33 @@
-import { useState } from "react";
+import React from "react";
+import Homeimage from './homeimage/home.jpg'
+import food1 from "./homeimage/food1.jpeg";
+import food2 from "./homeimage/food2.jpeg";
+import food3 from "./homeimage/food3.jpeg";
+import food4 from "./homeimage/food4.jpeg";
+import food5 from "./homeimage/food5.jpeg";
+import food6 from "./homeimage/food6.webp";
+import food7 from "./homeimage/food7.webp";
+import food8 from "./homeimage/food8.jpeg";
+import food9 from "./homeimage/food9.jpeg";
+import food10 from "./homeimage/food10.jpeg";
+import food11 from "./homeimage/food11.webp";
+import food12 from "./homeimage/food12.webp";
+import Card from "./Card";
 
-import "./App.css";
-import Card from "./components/Card";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import cravings from "./images/cravings.png";
-
-
-function App() {
-  
-  const [color, setColor]=useState("rgb(251 191 36)");
-
+const Home = () => {
 
   return (
-    <>
-      {/* start navbar of home page  */}
-      <div style={{backgroundColor:color}} className="animate__animated rounded-full animate__fadeInDown">
-        <Navbar navimage={cravings} />
-      </div>
-      {/* end navbar of home page  */}
-
+    <div>
       {/* start front page of app */}
       <div>
         <div>
-          <div className="flex flex-wrap justify-center items-center mt-10 mb-10 animate__animated animate__fadeIn">
+          <div className="flex flex-wrap justify-center items-center mt-10 mb-10">
             <div className="text-5xl text-left font-bold mr-20 ">
               <div className="p-2 text-black">Order Fast!</div>
               <div className="text-yellow-500 p-2">Craving</div>
             </div>
             <div>
-              <img src={Home} alt="Home" />
+              <img src={Homeimage} alt="Home" />
             </div>
           </div>
         </div>
@@ -37,11 +35,11 @@ function App() {
       {/* end front page of app */}
 
       {/* start cards of product */}
-      <div className="wow animate__animated animate__fadeInUp">
+      <div className="">
         <div className="mb-8 text-3xl font-bold flex justify-start">
           Our Products
         </div>
-        <div className="flex flex-wrap gap-[5.75rem] mb-5 wow animate__animated animate__fadeInUp">
+        <div className="flex flex-wrap gap-[5.75rem] mb-5">
           <Card
             foodImage={food1}
             foodName="Pinute Pow"
@@ -67,7 +65,7 @@ function App() {
             tag3="#timeless"
           />
         </div>
-        <div className="flex flex-wrap gap-[5.75rem] mb-5 wow animate__animated animate__fadeInUp">
+        <div className="flex flex-wrap gap-[5.75rem] mb-5 ">
           <Card
             foodImage={food4}
             foodName="Veg Pakoda"
@@ -93,7 +91,7 @@ function App() {
             tag3="#vibrant"
           />
         </div>
-        <div className="flex flex-wrap gap-[5.75rem] mb-5 wow animate__animated animate__fadeInUp">
+        <div className="flex flex-wrap gap-[5.75rem] mb-5 ">
           <Card
             foodImage={food7}
             foodName="Tea or Coffee"
@@ -119,7 +117,7 @@ function App() {
             tag3="#Comforting"
           />
         </div>
-        <div className="flex flex-wrap gap-[5.75rem] mb-5 wow animate__animated animate__fadeInUp">
+        <div className="flex flex-wrap gap-[5.75rem] mb-5 ">
           <Card
             foodImage={food10}
             foodName="Mushroom Fettuccine"
@@ -147,27 +145,8 @@ function App() {
         </div>
       </div>
       {/* end cards of product */}
-
-      <div className="mt-20 wow animate__animated animate__fadeInUp">
-        <div className="mb-8 text-3xl font-bold flex justify-start text-black">
-          Change Theme
-        </div>
-        <div className="flex gap-5 ">
-            <button onClick={()=>setColor("rgb(252 165 165)")} className="border-none text-md">Light Red</button>
-            <button onClick={()=>setColor("rgb(253 186 116)")} className="border-none text-md">Light Orange</button>
-            <button onClick={()=>setColor("rgb(52 211 153)")} className="border-none text-md">Light Green</button>
-            <button onClick={()=>setColor("rgb(147 197 253)")} className="border-none text-md">Light Blue</button>
-            <button onClick={()=>setColor("rgb(251 191 36)")} className="border-none text-md bg-gray-300">Set Default Color</button>
-        </div>
-      </div>
-
-      {/* start footer of home screen  */}
-      <div style={{backgroundColor:color}} className="wow animate__animated animate__fadeInUp">
-        <Footer footimage={cravings} />
-      </div>
-      {/* end footer of home screen */}
-    </>
+    </div>
   );
-}
+};
 
-export default App;
+export default Home;

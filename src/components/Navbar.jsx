@@ -1,10 +1,14 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import SignIn from "./SignIn";
+import { useState } from "react";
+
 
 const Navbar = (props) => {
+  const [color, setColor]=useState("rgb(251 191 36)");
+
   return (
-    <div className="relative w-full ">
+    <div className="relative w-full rounded-full " style={{backgroundColor:color }}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 rounded-full">
         <div className="inline-flex items-center space-x-2">
           <span>
@@ -21,11 +25,11 @@ const Navbar = (props) => {
           <ul className="ml-20 inline-flex space-x-8">
             <li>
               <NavLink
-                to="/Home"
+                to="/"
                 className={({ isActive }) =>
                   `${
-                    isActive ? "text-gray-600" : "text-gray-800"
-                  }text-gray-800 inline-flex items-center text-m font-semibold hover:text-gray-600`
+                    isActive ? "text-gray-800 border-b-2 border-gray-800" : "text-gray-800"
+                  } inline-flex items-center text-m font-semibold hover:text-gray-600`
                 }
               >
                 Home
@@ -36,8 +40,8 @@ const Navbar = (props) => {
                 to="/About"
                 className={({ isActive }) =>
                   `${
-                    isActive ? "text-gray-600" : "text-gray-800"
-                  }text-gray-800 inline-flex items-center text-m font-semibold hover:text-gray-600`
+                    isActive ? "text-gray-800 border-b-2 border-gray-800" : "text-gray-800"
+                  } inline-flex items-center text-m font-semibold hover:text-gray-600`
                 }
               >
                 About
@@ -48,8 +52,8 @@ const Navbar = (props) => {
                 to="/Contact"
                 className={({ isActive }) =>
                   `${
-                    isActive ? "text-gray-600" : "text-gray-800"
-                  } text-gray-800 inline-flex items-center text-m font-semibold hover:text-gray-600`
+                    isActive ? "text-gray-800 border-b-2 border-gray-800" : "text-gray-800"
+                  }  inline-flex items-center text-m font-semibold hover:text-gray-600`
                 }
               >
                 Contact

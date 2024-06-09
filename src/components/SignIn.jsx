@@ -7,8 +7,7 @@ const SignIn = () => {
       <Link to='/'>
     <img width="40" height="40" src="https://img.icons8.com/ios/50/circled-left-2.png" alt="circled-left-2"/>
     </Link>
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-         
+        <div className="grid grid-cols-1 lg:grid-cols-2">     
           <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
             <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
               <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
@@ -139,6 +138,7 @@ const SignIn = () => {
               src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/328722847/original/1ffd0c8eee476a8f832f7615b67f559bc6168e88/draw-food-illustration-for-you.jpg"
               alt=""
             />
+            
           </div>
         </div>
       </section>

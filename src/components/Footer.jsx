@@ -1,9 +1,12 @@
 import React from "react";
+import { useState } from "react";
 
 
 const Footer = (props) => {
+  const [color, setColor]=useState("rgb(251 191 36)");
+
   return (
-    <section className="relative overflow-hidden py-8 mt-20 rounded">
+    <section className="relative overflow-hidden py-8 mt-20 rounded" style={{backgroundColor:color }}>
       <div className="container relative z-10 mx-auto px-2">
         <div className="-m-8 flex flex-wrap items-center justify-between">
           <div className="w-auto p-8">
